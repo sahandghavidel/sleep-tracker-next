@@ -6,6 +6,7 @@ import { checkUser } from '@/lib/checkUser';
 
 export default async function Navbar() {
   const user = await checkUser();
+  console.log('Current User:', user);
 
   return (
     <nav>
