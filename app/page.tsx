@@ -1,5 +1,6 @@
 import AddNewRecord from '@/components/AddNewRecord';
 import Guest from '@/components/Guest';
+import RecordChart from '@/components/RecordChart';
 import { currentUser } from '@clerk/nextjs/server';
 
 export default async function HomePage() {
@@ -26,9 +27,8 @@ export default async function HomePage() {
                 Welcome Back, {user.firstName} 👋
               </h2>
               <p className='text-gray-600 mb-4'>
-                Here&#39;s a quick overview of your recent sleep activity.
-                Stay on top of your data insights and manage your tasks
-                efficiently!
+                Here&#39;s a quick overview of your recent sleep activity. Stay
+                on top of your data insights and manage your tasks efficiently!
               </p>
               <div className='space-y-2'>
                 <p className='text-gray-600'>
@@ -53,6 +53,7 @@ export default async function HomePage() {
         {/* Right Column */}
         <div className='space-y-6'>
           {/* Placeholder for RecordStats, RecentRecord, and Insights */}
+          <RecordChart />
         </div>
       </div>
       {/* Placeholder for SleepHistory */}
